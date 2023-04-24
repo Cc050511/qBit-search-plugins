@@ -1,7 +1,5 @@
 # qBit-acg.rip-search-plugins
-qBit search plugins for site acg.rip
-
-[original site](https://acg.rip)
+qBit search plugins for site [acg.rip](https://acg.rip)
 
 ### Requirement
 - python 3.10
