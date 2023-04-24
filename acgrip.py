@@ -41,7 +41,7 @@ class acgrip(object):
     # and their corresponding id. Possible categories are:
     # 'all', 'movies', 'tv', 'music', 'games', 'anime', 'software', 'pictures',
     # 'books'
-    supported_categories = {}
+    supported_categories = {'all': '0_0'}
 
     class acgripParser(HTMLParser):
         """Parses acg.rip browse page for search results and stores them."""
@@ -166,7 +166,7 @@ class acgrip(object):
     # DO NOT CHANGE the name and parameters of this function
     # This function will be the one called by nova2.py
 
-    def search(self, what):
+    def search(self, what, cat='all'):
         """
         Retreive and parse engine search results by category and query.
 

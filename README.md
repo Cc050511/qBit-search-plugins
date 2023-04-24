@@ -7,4 +7,4 @@ qBit search plugins for site [acg.rip](https://acg.rip)
 
 ### Add Plugin To qBittorrent
 
-- search plugin -> install a new search engine -> website link -> fill with https://github.com/Cc050511/qBit-acg.rip-search-plugins/blob/main/acgrip.py
+- search plugin -> install a new search engine -> website link -> fill with https://raw.githubusercontent.com/Cc050511/qBit-acg.rip-search-plugins/main/acgrip.py
