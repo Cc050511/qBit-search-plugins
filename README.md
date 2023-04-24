@@ -1,4 +1,6 @@
 # qBit-acg.rip-search-plugins
+![图片图片](./acgrip.png)
+
 qBit search plugins for site [acg.rip](https://acg.rip)
 
 ### Requirement
