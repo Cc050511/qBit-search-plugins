@@ -164,10 +164,11 @@ class mikanani(object):
             for each in hits:
                 prettyPrinter(each)
 
-            if len(hits) < 30:
-                break
-            del hits[:]
-            page += 1
+            # if len(hits) < 30:
+            #     break
+            # del hits[:]
+            # page += 1
+            break
 
         parser.close()
 
