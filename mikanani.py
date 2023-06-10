@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# VERSION: 1.0
+# VERSION: 1.1
 # AUTHORS: Yun (chenzm39@gmail.com)
 #
 #  This program is free software: you can redistribute it and/or modify
@@ -25,6 +25,7 @@ except ModuleNotFoundError:
 try:
     from novaprinter import prettyPrinter
     from helpers import retrieve_url
+    import requests
 except ModuleNotFoundError:
     pass
 
@@ -41,7 +42,7 @@ class mikanani(object):
     # and their corresponding id. Possible categories are:
     # 'all', 'movies', 'tv', 'music', 'games', 'anime', 'software', 'pictures',
     # 'books'
-    supported_categories = {'all': '0_0'}
+    supported_categories = {'all': ''}
 
     class mikananiParser(HTMLParser):
         """Parses acg.rip browse page for search results and stores them."""
@@ -148,14 +149,18 @@ class mikanani(object):
         """
         url = self.url
 
+        # print(url)
         hits = []
         page = 1
         parser = self.mikananiParser(hits, self.url)
         while True:
-            requirement = f'{url}/Home/Search?page={page}&searchstr={what}'
+            requirement = f'{url}/Home/Search?page={page}&searchstr={what}&subgroupid={cat}'
+            # s = requests.Session()
+            # res = new_retrieve_url(requirement,s)
             res = retrieve_url(requirement)
+            # print(res)
             parser.feed(res)
-            print(hits)
+            # print(hits)
             for each in hits:
                 prettyPrinter(each)
 
@@ -165,3 +170,15 @@ class mikanani(object):
             page += 1
 
         parser.close()
+
+
+def new_retrieve_url(url,s):
+    """ Return the content of the url page as a string """
+    user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
+    headers = {'User-Agent': user_agent}
+    s = requests.Session()
+    response = s.get(url, headers=headers)
+
+    dat = response.text
+    # return dat.encode('utf-8', 'replace')
+    return dat
