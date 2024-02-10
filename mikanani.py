@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# VERSION: 1.1
+# VERSION: 1.2
 # AUTHORS: Yun (chenzm39@gmail.com)
 #
 #  This program is free software: you can redistribute it and/or modify
@@ -33,7 +33,7 @@ except ModuleNotFoundError:
 class mikanani(object):
     """Class used by qBittorrent to search for torrents."""
 
-    url = 'https://mikanani.me'
+    url = 'https://mikanime.tv'
     name = 'mikanani'
 
     ###########################################################################

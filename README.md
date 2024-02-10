@@ -1,7 +1,7 @@
 # qBit-search-plugins
 
 - ![图片图片](./favicon.png)[acg.rip](https://acg.rip)
-- ![图片图片](./mikan-pic.png)[mikanani.me](https://mikanani.me)
+- ![图片图片](./mikan-pic.png)[mikanani.tv](https://mikanani.tv)
 
 ### Requirement
 - python 3.10
@@ -18,3 +18,7 @@
 
 ### NOTE
 The seeds and leech is not provided by mikanani.me
+
+### For more plugins
+
+<https://plugins.qbittorrent.org/>
